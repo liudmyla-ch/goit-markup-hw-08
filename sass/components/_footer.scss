@@ -1,0 +1,100 @@
+footer {
+  background-color: var(--background-hero);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.address__link {
+  color: var(--gray-text-color);
+  font-size: 14px;
+  line-height: 1.71;
+  font-style: normal;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &--white {
+    color: var(--white-color);
+  }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+.address__item {
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+.footer-social {
+  margin-right: 93px;
+}
+.footer-social__title {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--white-color);
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+}
+.footer {
+  &.social__link {
+    color: var(--white-color);
+    background-color: var(--footer-icon-color);
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+      transition-property: color, background-color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}
+.footer__contacts {
+  flex-grow: 1;
+}
+.subscription {
+  display: block;
+  position: relative;
+}
+.subscription__label {
+  display: block;
+  margin-bottom: 20px;
+}
+.subscription__input {
+  padding: 15px 16px;
+  color: var(--white-color);
+  outline: transparent;
+  width: 358px;
+  height: 50px;
+  background-color: var(--background-hero);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  &::placeholder {
+    color: var(--placeholder-color);
+  }
+  &:focus-within {
+    border: 1px solid var(--form-focus);
+    border-radius: 4px;
+  }
+}
+.subscription__title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
