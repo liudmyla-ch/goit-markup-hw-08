@@ -2,12 +2,22 @@
   color: var(--black-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: calc(28.18px / 24px);
   text-decoration: none;
   letter-spacing: 0.03em;
-  margin-right: 93px;
+
+  @media screen and (max-width: 767px) {
+    padding: 16px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: calc(30.52px / 26px);
+    margin-right: 93px;
+  }
 }
+
 .logo__text {
   color: var(--accent-color);
 }

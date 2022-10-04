@@ -11,6 +11,7 @@
   transition-property: opacity, visibility;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 }
 .backdrop.is-hidden {
   visibility: hidden;
@@ -26,8 +27,6 @@
 .modal {
   display: block;
   position: absolute;
-  min-height: 581px;
-  min-width: 528px;
   background-color: var(--white-color);
   left: 50%;
   top: 50%;
@@ -41,6 +40,23 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
+
+  @media screen and (max-width: 767px) {
+    width: calc(100% - 30px);
+    max-width: 450px;
+    max-height: 609px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-height: 609px;
+    max-width: 450px;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-height: 581px;
+    min-width: 528px;
+  }
 }
 .modal-form {
   text-align: center;
@@ -52,6 +68,10 @@
   font-size: 20px;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 .modal-form__label {
   display: block;
@@ -112,12 +132,17 @@
   letter-spacing: 0.01em;
 }
 .modal-license__text {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: calc(14.06px / 12px);
   letter-spacing: 0.03em;
   color: var(--gray-text-color);
   text-align: center;
   user-select: none;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: calc(24px / 14px);
+  }
 }
 .modal-license__link {
   color: var(--form-focus);

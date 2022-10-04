@@ -106,3 +106,27 @@
 .btn__text {
   margin-right: 10px;
 }
+.btn-menu {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.btn-menu:hover,
+.btn-menu:focus {
+  fill: var(--accent-color);
+}

@@ -3,6 +3,9 @@ body {
   color: var(--main-text-color);
   background-color: var(--white-color);
 }
+body.modal-open {
+  overflow: hidden;
+}
 img {
   display: block;
   max-width: 100%;
@@ -10,10 +13,4 @@ img {
 }
 .icon {
   fill: currentColor;
-}
-.container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 15px;
 }
