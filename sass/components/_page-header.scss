@@ -118,7 +118,7 @@ header {
   position: absolute;
   display: block;
   left: 0;
-  top: 53px;
+  top: 48px;
   width: 100%;
   height: 4px;
   background-color: var(--accent-color);
@@ -200,6 +200,7 @@ header {
   &--phone {
     font-size: 34px;
     line-height: calc(40px / 34px);
+    color: var(--accent-color);
   }
 
   &--mail {
@@ -209,7 +210,6 @@ header {
 }
 .mobile-social {
   display: flex;
-  justify-content: center;
 
   &__link {
     text-decoration: none;

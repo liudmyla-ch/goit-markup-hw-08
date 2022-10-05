@@ -19,8 +19,11 @@
   &:not(:last-child) {
     margin-right: 8px;
   }
-  &:not(:nth-last-child(-n + 2)) {
-    margin-bottom: 15px;
+
+  @media screen and (max-width: 767px) {
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 15px;
+    }
   }
 }
 .portfolio__list {
@@ -55,13 +58,15 @@
   }
 }
 .portfolio__title {
-  height: 146px;
   border: 1px solid var(--border-portfolio);
   border-top: none;
   padding: 20px 24px;
+  flex-grow: 1;
 }
 .portfolio__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
   font-size: 16px;
   line-height: 1.88;
